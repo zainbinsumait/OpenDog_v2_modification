@@ -32,7 +32,8 @@ University tutor : FAUVET Eric
 
 University year 2021-2022
 
-######### **Table of Contents**
+######### **Table of Contents** #########
+
 [I	Introduction:	4](#_Toc106573279)
 
 [II	University :	5](#_Toc106573280)
@@ -98,7 +99,7 @@ University year 2021-2022
 
 I would like to thank Mr. Enrique Comesaña Figueroa, my internship supervisor, who had the patience and the pedagogy to accompany me during the whole period of my internship. His strictness and availability made this internship a strong and enriching experience. I would also like to thank Mr. Roberto Iglesias Rodriguez, who was the second supervisor of this internship, for the help and the precious information he provided. I thank Mr. David Fofi and Mr. Eric Fauvet as well for giving me this opportunity.  
 
-1. # Introduction:
+# Introduction:
 
 In the art of conception, designers are inspired by living beings to build the design which is called biomimetic. Almost every time they copy an animal to have its features (plane conception for example which has been inspired by a bird). This phenomenon gives the possibility to overcomes the limitation of a classic design [1]. 
 
@@ -125,7 +126,9 @@ Inspired by the biological dog, Spot (the most famous robotic dog) was created b
 The robot consists of a body and four legs. Each leg has three motors and three encoders, one motor represents the knee joint and two for the hip (one rotates around the same axis as the knee and the second around the body axis). The two motors are controlled by an Odrive board. In total, the robot has 12 brushless motors, 12 encoders for the position feedback, 6 Odrive boards, an IMU sensor in the centre of the body for balance feedback, a mother board (an Arduino or a Raspberry Pi ), and 7 power supplies (one for each board and the 7th for the mother board and IMU sensor) [5]. 
 
 # Chapter 1 : Mechanical part
-## ![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.006.png)Original design
+ ![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.006.png)
+
+## 1. Original design
 The major features required are lightweight and robustness which can be provided with a 3D printer. Around 80% of the design is a 3D printed PLA with some Flex filament for the feet. Aluminium is used for bar links as well as carbon fibres to add more stability and durability. The initial design created by James Bruton is illustrated in figure 2.
 
 The dog design is inspired as well from Boston Dynamics Spot. Most of the weight is in the body to have more control and easy balance. In the middle part there are seven batteries, four motors for the hip rotation, motherboard (Arduino or Raspberry Pi), all the 6 Odrive Boards, cables and the IMU sensor.
@@ -136,9 +139,9 @@ The dog design is inspired as well from Boston Dynamics Spot. Most of the weight
 
 The leg has three parts : hip part, upper leg, and lower leg. One motor is in the hip part to control the upper leg rotation. Another one is in the upper leg to control the rotation of the lower leg. The lower leg has no electronic components with a carbon fibre tube as a connection between the foot and the lower leg to make it as light as possible and concentrate the weight closer to the centre of the body. To this point no modifications were made, the first test leg was printed to discover the spots to edit.
 
-1. ## Modifications to the original design
+ ## 2. Modifications to the original design
 
-1. ### Pieces to adapt with the electronic components used 
+ ### 1. Pieces to adapt with the electronic components used 
 
 In this project, we did not use the same motors (as mentioned in the electrical part) because of its unavailability. We used ABB aj90-30 which does not have the same design as the original one. Hence, a new pulley (figure 4) had to be created for this motor which in the end has more teeth than the original. Therefore, the belt reduction changed. We also needed to adapt the belt length in order to have a tighter belt without transmission power lose. Both driven gears have seventy teeth which gives a gear reduction of 70:28 for the upper leg and 70:32 for the lower leg. The difference between the two pulleys is because the distance from the pulley centre to the driven gear centre is not the same in the hip and in the upper leg. 500mm HTD belt is used in the hip on the other side 665mm HTD belt.    
 
@@ -175,7 +178,7 @@ A support to hold this test leg during the test needed to be designed as well. I
 
 
 
-1. ### Improvements Made
+ ### 2. Improvements Made
 
 ![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.016 1 1.png]]
 *Figure 7: adding nuts to the design*
@@ -208,7 +211,7 @@ Make the rotation axis of the upper leg more stable and easier to dismount by ad
 
 With these modifications, we ended up with a stable and easy-to-dismount design. 
 
-1. ## kinematic model 
+ ## 3. kinematic model 
 
 ![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.023 1.jpeg]]
 *Figure 10: 2D sketch of the leg with coordinate system*
@@ -256,12 +259,12 @@ Another option to have the transformation matrix is to use the Denavit-Hartenber
 
 
 
-1. # Chapter 2 : Electronic components
+# Chapter 2 : Electronic components
 
 The crucial factor is the complexity and the price. An easy-to-use component is expensive most of the time. The board and the encoder of the original design were used, but not the same motors. In this chapter, all the components and all their configurations will be mentioned.
 
 
-1. ## Motor Aj90-30
+ ## 1. Motor Aj90-30
 
 ![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.027 1.jpeg]]
 *Figure 12: Aj90-30 motor*
@@ -272,7 +275,7 @@ This is a powerful three phases brushless motor which supports until 58 (A) of c
 
 
 
-1. ## Encoder 
+ ## 2. Encoder 
 
 ![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.030 1.jpeg]]
 
@@ -298,7 +301,7 @@ This interface is used to send the rotation information to the Odrive board by c
 
 To test the encoder, an Arduino was used directly with it. By rotating the magnet above, the chip will read angle changes. 
 
-1. ## Odrive board – High performance motor control
+ ## 3. Odrive board – High performance motor control
 
 
 ![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.036.jpeg)
@@ -321,12 +324,12 @@ The board is enormously powerful and provide features that could not be used for
 ![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.045 1.png]]
 *Figure 17: board connection*
 
-1. # Chapter 3: Programming and control system
+# Chapter 3: Programming and control system
 
 A movement of a robotic dog is quite different from the real one. To simulate the same movement exactly, enormously powerful components and a stable balance are required as well as an AI program. In this project, for now, one leg is available for a movement test. However, the control system of the entire robot will be discussed in this chapter. 
 
 
-1. ## Movement of a real dog vs robotic dog
+ ## 1. Movement of a real dog vs robotic dog
 ## 
 A real dog has six moving styles: walk, amble, pace, trot, canter, gallop. In this part, the walk style will be studied to simulate it programmatically. Dog walking cycle has eight positions (figure 18) in each of them there are three or two legs touching the ground with a ¾ delay between front and rear legs. All the legs perform the same movement but this offset in the frequency of each one creates the movement forward. 
 
@@ -336,13 +339,13 @@ A real dog has six moving styles: walk, amble, pace, trot, canter, gallop. In th
 
 To make the robotic dog walk, there are two methods. Either the real dog method that requires the capability of having a balance using just two legs, or a high frequency continuous up-down movement of four legs with a delay of ½ between the cross legs. Although the first method is smoother and more stable, it includes complex control system, high precision components and a precise position of the centre of the body mass which increases the overall cost of the robot. The second method avoids the complexity by repeating this balance movement to avoid falling even if the centre of the mass is not in the centre of the body.
 
-1. ## Control method 
+ ## 2. Control method 
 
 Odrive board provides multiple control modes with multiple trajectory control modes. After the board is configured, a control mode can be selected to select then the input mode. Here, a position control mode is used with two modes of trajectory: one for fast movement (PASSTHROUGH) which does not use a filter. However, it causes more vibration in the system. Another mode is a Filtered Position Control which allows to control the frequency or the bandwidth of the filter. 
 
 A python program is used to control the board, starting from the configuration of all the parameters, calibration of the motor and the encoder, selecting the control mode and control the movement.
 
-1. ### Configuration and calibration process :  
+ ### 1. Configuration and calibration process :  
 
 The board must be configured according to the parameters of the system to have a good and safe performance. The parameters such as the voltage, maximum current, brake resistance value, the motor calibration current, torque limit, control mode and many more can be personalised according to the application, system, and components .
 
@@ -352,14 +355,14 @@ Using a three signals encoder (the third as an index) allows to save the calibra
 
 Once the calibration process is completed, the closed loop of the motor can be selected and then control the motor by incrementing the position by a certain value or chose a position to go. The board considers that there is one rotation between the position 0 and 1. To have a half rotation, the incremental value is 0.5.   
 
-1. ### PID controller : 
+ ### 2.PID controller : 
 
 The objective of this part is to have a solid system with smooth movement and less vibration. By using a GUI of the board (as illustrated in the figure 10), the PID parameters can be adjusted. The practical test method of the PID parameters were applied to obtain these values. To distribute the weight of the body (around 15kg) along the four legs, these parameters -that can be changed by python program also (appendix) - have to be adjusted at the end of the project to have an optimal performance.
 
 ![[Pasted image 20220727163654.png]]
 
 *Figure 19: feedback position and desired position graph*
-1. ## Control system
+ ## 3.Control system
 
 Moving four legs regularly - it is the base of a balance movement according to the second method. That means even to move the robot one inch forward the robot must proceed this movement and then do this step. Consequently, multiple modes are required in the control system which includes one for the balance movement. 
 
@@ -367,29 +370,29 @@ In this project, this part is still vague. However, the original project has its
 
 The idea which probably can be used in this project is to control the entire robot using a raspberry pi. That will allow us to use ROS as a communication network between the 6 Odrive boards, the Arduino controller, IMU sensor and the power supplies. The control system will take into consideration all the information to deliver the appropriate order. So far two modes of movement were developed: a balance movement and forward movement. 
 
-1. ### Balance movement 
+ ### 1. Balance movement 
 
 A high frequency continuous up-down movement was performed by the four legs with a delay of ½ between cross legs. By controlling the position and the velocity of each motor and getting the exact rotation using the inverse kinematic model, an up-down movement through x axis can be performed. With a frequency of 5 Hz for each leg, the robot can remain in the same position and keep its balance. Noted that this movement will be combined with the other mode of movement to keep the balance.
 
-1. ### Forward movement 
+ ### 2. Forward movement 
 
 Combined with the balance movement, this movement advances the body forward by moving the front legs forward by taking two points at a specific height on the y axis. Then the inverse kinematic model gives the angle that the motors should achieve to reach these points. The movement of one leg in the end will be up, forward, down, and backward. It has been tested in the test leg with success. 
 
 
-1. ## Gazebo simulation :
+ ## 4. Gazebo simulation :
 
 In this part, the objective is to have a simulation of the leg first and then of the entire robot. For that, gazebo simulation version 11 will be used. Gazebo is an open-source 3D robotics simulator that allows to simulate any kind of robot inside a personalized environment. This simulation will be used to test the movement of the entire robot and the control system.
 
 The first step is to convert the 3D design files into gazebo files (URDF). To convert from fusion 360, a plugin of a python script is needed. The files to download with the tutorial are available on GitHub [9].
 
 So far, the (URDF) files are already ready but the control of the movement and the program of the simulation are under implementation.
-1. # ` `General conclusion 
+ # General conclusion 
 
 Next step in this project will be build the hardware of the body and the other legs and perform simulation using gazebo. The second leg is almost ready, only the engines remain and the Odrive board. An Odrive board -other than the one used for the test leg- has connection issues and a discussion with the provider is in progress to resolve the problem. 
 
 Next step is also to test the other option of controlling the motors without Odrive for the other legs. Finally, test and analyse the entire robot movement, develop the control program, and improve the system.
 
-1. # Bibliography
+ # Bibliography
 
 
 |[1] |J. Hwang, Y. Jeong, J. Min Park, K. Hong Lee, J. Wook Hong and J. Choi1, “Biomimetics: forecasting the future of science, engineering, and medicine.,” *International journal of nanomedicine,* p. 13, 2015. |
