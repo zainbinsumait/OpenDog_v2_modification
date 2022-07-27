@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "7f3bfb54dc8af755",
+    "type": "split",
+    "children": [
+      {
+        "id": "c8d035159d43bc35",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "preview",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "184ec2d3b6233aba",
+    "type": "split",
+    "children": [
+      {
+        "id": "cdb96b15c9c084e5",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2a7d17f03cfcd065",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9877400df4f935ea",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "40948220d00952b1",
+    "type": "split",
+    "children": [
+      {
+        "id": "2c6b7257b42ee588",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3569dc0a9b6283d9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c8d035159d43bc35",
+  "lastOpenFiles": [
+    "README.md",
+    "Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.002.png",
+    "Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.012 1.jpeg"
+  ]
+}
