@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "c8d035159d43bc35",
+        "id": "b0d887c037c7148e",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "README.md",
-            "mode": "preview",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -69,7 +65,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -87,9 +82,11 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "c8d035159d43bc35",
+  "active": "b0d887c037c7148e",
   "lastOpenFiles": [
+    "Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.021 1.png.md",
     "README.md",
+    "Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.016 1 1.png.md",
     "Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.002.png",
     "Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.012 1.jpeg"
   ]
