@@ -1,4 +1,4 @@
-﻿![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.001.png)![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.002.png)   
+![esirem](https://user-images.githubusercontent.com/76461363/181305382-47f70301-d5ac-451c-bc49-15a93170ca7e.png)![USCuniversity](https://user-images.githubusercontent.com/76461363/181305369-e7de6c02-57e4-4645-8e9c-e0c4ef6160fd.png)
 
 
 Building a Robot Dog based on
@@ -126,7 +126,8 @@ Inspired by the biological dog, Spot (the most famous robotic dog) was created b
 The robot consists of a body and four legs. Each leg has three motors and three encoders, one motor represents the knee joint and two for the hip (one rotates around the same axis as the knee and the second around the body axis). The two motors are controlled by an Odrive board. In total, the robot has 12 brushless motors, 12 encoders for the position feedback, 6 Odrive boards, an IMU sensor in the centre of the body for balance feedback, a mother board (an Arduino or a Raspberry Pi ), and 7 power supplies (one for each board and the 7th for the mother board and IMU sensor) [5]. 
 
 # Chapter 1 : Mechanical part
- ![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.006.png)
+ ![full_design](https://user-images.githubusercontent.com/76461363/181305384-9d49a652-ee5e-46b8-87a4-32f10723a981.png)
+
 
 ## 1. Original design
 The major features required are lightweight and robustness which can be provided with a 3D printer. Around 80% of the design is a 3D printed PLA with some Flex filament for the feet. Aluminium is used for bar links as well as carbon fibres to add more stability and durability. The initial design created by James Bruton is illustrated in figure 2.
@@ -135,7 +136,7 @@ The dog design is inspired as well from Boston Dynamics Spot. Most of the weight
 
 
 
-![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.008.png)
+![leg](https://user-images.githubusercontent.com/76461363/181305335-7790885c-da9d-4c9a-b3cf-ea982fefca44.png)
 
 The leg has three parts : hip part, upper leg, and lower leg. One motor is in the hip part to control the upper leg rotation. Another one is in the upper leg to control the rotation of the lower leg. The lower leg has no electronic components with a carbon fibre tube as a connection between the foot and the lower leg to make it as light as possible and concentrate the weight closer to the centre of the body. To this point no modifications were made, the first test leg was printed to discover the spots to edit.
 
@@ -145,7 +146,8 @@ The leg has three parts : hip part, upper leg, and lower leg. One motor is in th
 
 In this project, we did not use the same motors (as mentioned in the electrical part) because of its unavailability. We used ABB aj90-30 which does not have the same design as the original one. Hence, a new pulley (figure 4) had to be created for this motor which in the end has more teeth than the original. Therefore, the belt reduction changed. We also needed to adapt the belt length in order to have a tighter belt without transmission power lose. Both driven gears have seventy teeth which gives a gear reduction of 70:28 for the upper leg and 70:32 for the lower leg. The difference between the two pulleys is because the distance from the pulley centre to the driven gear centre is not the same in the hip and in the upper leg. 500mm HTD belt is used in the hip on the other side 665mm HTD belt.    
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.009 1.png]]
+![pully](https://user-images.githubusercontent.com/76461363/181305362-a4adff1b-cb45-4746-b83d-8015aeb4d77f.png)
+
 *Figure 4: motor pulley*
 `  `Hip / upper leg
 
@@ -161,15 +163,15 @@ In this project, we did not use the same motors (as mentioned in the electrical 
 The second piece is the magnetic holder. A round magnet needs to be held at a certain distance (see the encoder part in the electrical chapter) from the encoder chip and should turn with the motor. So, a piece that will attach the magnet with the motor needs to be designed. The original piece cannot be used as the motor is not the same. The motor has a different shape in the lower part which makes attaching a piece with the turning part exceedingly difficult (figure 5). A round base piece has been designed and attached to the turning part using Cyanoacrylate glue. Although, it is not efficient way, it is the easiest and the appropriate for this part which will turn freely without any friction. Alternatively, a metal part should be soldered to the turning part and then attached to the plastic piece.
 
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.012 1.jpeg]]
+![magnet_holder](https://user-images.githubusercontent.com/76461363/181305337-8b7bcf96-38c9-4862-9381-aa608a492c9b.jpeg)
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.013 1.png]]
+![motor_magnet_holder](https://user-images.githubusercontent.com/76461363/181305350-4b2eeacf-f044-404c-9bb3-ce3375c349a8.png)
 
 
 
 - The support:
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.014 1 1.png]]
+![support](https://user-images.githubusercontent.com/76461363/181305367-6513ab34-d3ce-40ca-a400-e48d77137333.png)
 
 *Figure 6: support*
 
@@ -180,7 +182,8 @@ A support to hold this test leg during the test needed to be designed as well. I
 
  ### 2. Improvements Made
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.016 1 1.png]]
+![mod1](https://user-images.githubusercontent.com/76461363/181305340-7ff10f22-0b37-4289-a672-04983a3437c7.png)
+
 *Figure 7: adding nuts to the design*
 
 Improving the design to fit the educational purpose was a part of the internship. The robot must be durable, stable, less expensive and withstand the cycle of mounting and dismounting for a long duration. After testing the first leg, we have these remarks:
@@ -197,7 +200,8 @@ Consequently, to give more stability and durability to the design we made these 
 
 
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.019 1.png]]
+![mod2](https://user-images.githubusercontent.com/76461363/181305342-d1011d1b-95ef-4320-aec6-ea4a4321db46.png)
+
 *Figure 8: section view of the upper leg  rotation axis*
 
 Make the rotation axis of the upper leg more stable and easier to dismount by adding a blind flange in the other side with a thread bar gathering these sides (figure 8) and use the same linking concept with the lower leg and its rotation axis (figure 9).
@@ -205,7 +209,7 @@ Make the rotation axis of the upper leg more stable and easier to dismount by ad
 
 
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.021 1.png]]
+![mod3](https://user-images.githubusercontent.com/76461363/181305346-9f567b81-e347-4d4e-8f30-22733b821d24.png)
 
 *Figure 9: modification in the lower leg rotation axis*
 
@@ -213,7 +217,8 @@ With these modifications, we ended up with a stable and easy-to-dismount design.
 
  ## 3. kinematic model 
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.023 1.jpeg]]
+![kinematic_drow](https://user-images.githubusercontent.com/76461363/181305331-48a29ede-8f4a-4c6d-ab39-7e3e83fd79b7.jpeg)
+
 *Figure 10: 2D sketch of the leg with coordinate system*
 
 
@@ -226,19 +231,22 @@ The orthogonal coordinate system of the base R0 which has the x axis down and th
 
 
 Two rotations and one translation from R0 to R2, the transformation matrix after the calculation will be:
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.024 1.png]]
+
+![matrix_trans](https://user-images.githubusercontent.com/76461363/181305339-f940d424-72a6-459e-87ef-e6530cb0b495.png)
 
 With the position equations, a specific position can be chosen as an input and alpha and beta will be the output. A specific angle can be imposed to facilitate the process. 
 
 To have a good balance while walking, the robot should move its legs up and down regularly or periodically. While keeping the same position the foot must remain in x axis during the up-down movement. The feet will go through the y axis to move forward and in the negative side to backword. 
 
-*Figure 11: Graph relates alpha, beta, and the distance x*
 
-![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.026.png)
+
+![graphe](https://user-images.githubusercontent.com/76461363/181305324-1ead306d-0854-43b0-9152-bf6694aa86d0.png)
+
+*Figure 11: Graph relates alpha, beta, and the distance x*
 
 The movement through the w axis is represented by the figure 11 , and the relation between the three parameters (coordinate in x, alpha and beta). 
 
-These angles are in degrees. The following equation can be used to convert these angles in a motor rotation and use these results as an input of the motor incremental [(See the programming part) :](#_Forward_movement)
+These angles are in degrees. The following equation can be used to convert these angles in a motor rotation and use these results as an input of the motor incremental.
 
 Rotation of the lower leg  = beta \* 70 32\*1360           where 70/32 is the Gear reduction
 
@@ -266,7 +274,8 @@ The crucial factor is the complexity and the price. An easy-to-use component is 
 
  ## 1. Motor Aj90-30
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.027 1.jpeg]]
+![motor_aj](https://user-images.githubusercontent.com/76461363/181305349-f69d7c33-449e-4fa1-ac9b-21522f23ba9c.jpeg)
+
 *Figure 12: Aj90-30 motor*
 
 
@@ -277,14 +286,15 @@ This is a powerful three phases brushless motor which supports until 58 (A) of c
 
  ## 2. Encoder 
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.030 1.jpeg]]
+![encoder](https://user-images.githubusercontent.com/76461363/181305376-47522dc9-860f-40a3-bc88-3047dbdebc21.jpeg)
+
 
 *Figure 13: AS5047P encoder*
 
 
 AS5047P is a high-resolution rotary position hall effect sensor for fast absolute angle measurement over a full 360-degree range (figure 13). It can send a precise data for the rotation angle of a magnet placed near the chip. It comes with a round magnet which allows it to have the rotation angle. However, this magnet must be placed over or under the encoder chip with airgap maintained in the range 0.5mm to 3mm and should be centred on the middle of the package with a tolerance of 0.5mm (figure 14). The magnet holder must not be ferromagnetic as well.
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.031 1.png]]
+![encoder_gap](https://user-images.githubusercontent.com/76461363/181305379-c2ea1bb9-6948-4dbe-94f0-5e24673049ac.png)
 *Figure 14: emplacement of the magnet*
 
 
@@ -295,7 +305,7 @@ This encoder can be used with Arduino by standard 4-wire SPI serial interface. T
 
 This interface is used to send the rotation information to the Odrive board by connecting the ports : A, B and I to the A, B and Z inputs of the board as well as the ground and 5V port (figure 15).
 
-![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.033.png)
+![encoder_Odrive_connection](https://user-images.githubusercontent.com/76461363/181305380-67e6c452-b996-4d89-8156-30c6aab3cec3.png)
 
 *Figure 15: encoder-Odrive connection*
 
@@ -304,7 +314,8 @@ To test the encoder, an Arduino was used directly with it. By rotating the magne
  ## 3. Odrive board – High performance motor control
 
 
-![](Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.036.jpeg)
+![Odrive_board](https://user-images.githubusercontent.com/76461363/181305353-7005666a-c7cb-4231-b004-b108a35b9c12.jpeg)
+
 *Figure 16: Odrive board*
 
 
@@ -321,7 +332,7 @@ The board is enormously powerful and provide features that could not be used for
 
 
 
-![[Aspose.Words.bcef06b6-277f-4471-8e70-583fbaecc916.045 1.png]]
+![Odrive_connection](https://user-images.githubusercontent.com/76461363/181305355-416ae8d2-1367-4b2b-be12-1714a2cc127f.png)
 *Figure 17: board connection*
 
 # Chapter 3: Programming and control system
@@ -359,7 +370,7 @@ Once the calibration process is completed, the closed loop of the motor can be s
 
 The objective of this part is to have a solid system with smooth movement and less vibration. By using a GUI of the board (as illustrated in the figure 10), the PID parameters can be adjusted. The practical test method of the PID parameters were applied to obtain these values. To distribute the weight of the body (around 15kg) along the four legs, these parameters -that can be changed by python program also (appendix) - have to be adjusted at the end of the project to have an optimal performance.
 
-![[Pasted image 20220727163654.png]]
+![PID](https://user-images.githubusercontent.com/76461363/181305360-397093fe-cefa-44ad-9c1a-f66d1a7c4b12.png)
 
 *Figure 19: feedback position and desired position graph*
  ## 3.Control system
